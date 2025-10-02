@@ -3,18 +3,38 @@
 
 int main(int argc, char *argv[])
 {
-    int x;
-    int sum=0;
-    int i;
+    int a, b;
+    char op;
+    int result;
     
-    printf("Input an integer :");
-    scanf("%d", &x);
+    printf("Enter the calculation :");
+    scanf("%d %c %d",&a, &op, &b);
     
-    for(i=1;i<=x;i++)
-           sum = sum + i;
-    
-    printf("sum is %i|n", sum);
-    
-  system("PAUSE");	
-  return 0;
+    switch(op)
+    {
+              case '+':
+                   result = a+b;
+                   break;
+              case '-':
+                   result = a-b;
+                   break;
+              case '*':
+                   result = a*b;
+                   break;
+              case '/': 
+            if (b != 0) result = a / b;   
+            else {
+                printf("0으로 나눌 수 없습니다!\n");
+                return 1;
+            }
+            break;
+        default:
+            printf("잘못된 연산자!\n");
+            return 1;
+    }
+
+    printf("= %d\n", result);
+
+    system("pause");
+    return 0;
 }
