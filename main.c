@@ -3,37 +3,27 @@
 
 int main(int argc, char *argv[])
 {
-    int a, b;
-    char op;
-    int result;
+    int answer = 59;
+    int num;
+    int trial=0;
     
-    printf("Enter the calculation :");
-    scanf("%d %c %d",&a, &op, &b);
-    
-    switch(op)
+    do
     {
-              case '+':
-                   result = a+b;
-                   break;
-              case '-':
-                   result = a-b;
-                   break;
-              case '*':
-                   result = a*b;
-                   break;
-              case '/': 
-            if (b != 0) result = a / b;   
-            else {
-                printf("0으로 나눌 수 없습니다!\n");
-                return 1;
-            }
-            break;
-        default:
-            printf("잘못된 연산자!\n");
-            return 1;
-    }
+        printf("Input a number:");
+        scanf("%d", &num);
+        trial++;
+        
+        if(answer < num)
+            printf("high!|n");
+        else if (answer > num)
+             printf("low!|n");
+             
+             
+}
+while(num != answer);
 
-    printf("= %d\n", result);
+printf("Congratulation! trial:%i|n", trial);
+
 
     system("pause");
     return 0;
