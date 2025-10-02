@@ -9,11 +9,9 @@ int main(int argc, char *argv[])
     scanf("%d", &x);
     
     if (x > 0)
-       printf("양수입니다.|n"); 
-    else if (x < 0)
-         printf("음수입니다.|n");
+       printf("absol is %i.|n", x); 
     else
-         printf("0입니다.|n"); 
+         printf("absol is %i.|n", -x); 
   
   system("PAUSE");	
   return 0;
